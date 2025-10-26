@@ -8,3 +8,4 @@ crash.log
 # AWS credentials or local overrides
 *.tfvars
 aws_credentials.json
+aws-eks-lab.zip
