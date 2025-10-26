@@ -1,3 +1,13 @@
+# AWS EKS Lab
+
+[![Latest Release](https://img.shields.io/github/v/release/groy75/aws-eks-lab?label=latest%20release&color=blue)](https://github.com/groy75/aws-eks-lab/releases)
+[![Terraform](https://img.shields.io/badge/Terraform-Cloud%20Infrastructure-623CE4?logo=terraform)](https://www.terraform.io/)
+[![Kubernetes](https://img.shields.io/badge/Kubernetes-EKS%20Cluster-326CE5?logo=kubernetes)](https://kubernetes.io/)
+[![License](https://img.shields.io/github/license/groy75/aws-eks-lab?color=lightgrey)](https://github.com/groy75/aws-eks-lab/blob/main/LICENSE)
+
+Professional-grade AWS EKS lab project demonstrating Terraform-managed infrastructure, Helm-based monitoring, CloudWatch integration, and CI/CD workflows with Infracost.
+
+
 # AWS Terraform Lab
 
 A sandbox project to learn and test AWS infrastructure using Terraform.
