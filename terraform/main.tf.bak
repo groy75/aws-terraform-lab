@@ -1,0 +1,46 @@
+# Auto-generated Terraform stubs for default VPC: vpc-0b45626fbd6e4b626
+
+resource "aws_vpc" "default" {
+  cidr_block           = "172.31.0.0/16"
+  enable_dns_support   = true
+  enable_dns_hostnames = true
+  tags                 = { Name = "default" }
+}
+
+resource "aws_internet_gateway" "default_igw" {
+  vpc_id = aws_vpc.default.id
+  tags   = { Name = "DefaultInternetGateway" }
+}
+
+resource "aws_subnet" "default_useast2a" {
+  vpc_id            = aws_vpc.default.id
+  cidr_block        = "172.31.0.0/20"
+  availability_zone = "us-east-2a"
+  tags              = { Name = "DefaultSubnet-us-east-2a" }
+}
+
+resource "aws_subnet" "default_useast2b" {
+  vpc_id            = aws_vpc.default.id
+  cidr_block        = "172.31.16.0/20"
+  availability_zone = "us-east-2b"
+  tags              = { Name = "DefaultSubnet-us-east-2b" }
+}
+
+resource "aws_subnet" "default_useast2c" {
+  vpc_id            = aws_vpc.default.id
+  cidr_block        = "172.31.32.0/20"
+  availability_zone = "us-east-2c"
+  tags              = { Name = "DefaultSubnet-us-east-2c" }
+}
+
+resource "aws_route_table" "rt_rtb-0a3d36f1aad137f5a" {
+  vpc_id = aws_vpc.default.id
+  tags   = { Name = "Imported-rtb-0a3d36f1aad137f5a" }
+}
+
+resource "aws_security_group" "default_sg" {
+  vpc_id      = aws_vpc.default.id
+  name        = "default"
+  description = "Default VPC security group"
+}
+

@@ -1,0 +1,7 @@
+terraform import aws_vpc.default vpc-0b45626fbd6e4b626
+terraform import aws_internet_gateway.default_igw igw-076126ce26628b405
+terraform import aws_subnet.default_useast2a subnet-08ab3340914d703ef
+terraform import aws_subnet.default_useast2b subnet-073e6c95a6c2d2d7f
+terraform import aws_subnet.default_useast2c subnet-0cc96fa96161c18ec
+terraform import aws_route_table.rt_rtb-0a3d36f1aad137f5a rtb-0a3d36f1aad137f5a
+terraform import aws_security_group.default_sg sg-0568a3445cc764a9d
