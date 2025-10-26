@@ -1,0 +1,11 @@
+name: Infracost CI
+on:
+  pull_request:
+    branches: [ main ]
+jobs:
+  infracost:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: infracost/actions/setup@v2
+      - run: infracost breakdown --path=terraform --format=table

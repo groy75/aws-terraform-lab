@@ -1,0 +1,21 @@
+digraph EKS {
+rankdir=LR;
+bgcolor="#1e1e1e";
+node [style=filled fontcolor=white color="#2e2e2e" fillcolor="#333333"];
+edge [color="#999999"];
+
+subgraph cluster_vpc {
+label="VPC: vpc-0b45626fbd6e4b626";
+style=dashed;
+EKS [label="EKS Cluster\n(gregsplace-eks-cluster)"];
+Nodes [label="Managed Node Group\nt3.micro"];
+EKS -> Nodes;
+}
+
+CloudWatch [label="CloudWatch Logs", fillcolor="#222244"];
+Grafana [label="Grafana Dashboard", fillcolor="#224422"];
+Prometheus [label="Prometheus Metrics", fillcolor="#442222"];
+
+Nodes -> CloudWatch;
+Nodes -> Prometheus -> Grafana;
+}
