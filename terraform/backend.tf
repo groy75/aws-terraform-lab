@@ -1,7 +1,8 @@
 terraform {
   backend "s3" {
-    bucket = "greg-terraform-state"
-    key    = "lab/terraform.tfstate"
-    region = "ca-central-1"
+    bucket  = "terraform-state-nfngreg"
+    key     = "lab/terraform.tfstate"
+    region  = "us-east-2"
+    encrypt = true
   }
 }
